@@ -1,0 +1,112 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #111;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.heart{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    position: relative;
+    transform: rotate(-45deg);
+    /* box-shadow: -10px 20px 90px rgb(1, 1, 1); */
+    animation: h 2s linear infinite;
+    left: 16%;
+    top: 100%;
+    z-index: 1;
+    animation: clr 5s infinite;
+}
+@keyframes clr{
+    0%{
+        background-color: black;
+    }
+    25%{
+        background-color: red;
+    }
+    50%{
+        background-color: rgb(30, 255, 0);
+    }
+    75%{
+        background-color: rgb(171, 23, 208);
+    }
+    100%{
+        background-color: rgb(229, 237, 13);
+
+    }
+}
+@keyframes h{
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+
+    }
+    100%{
+        transform: rotate(-45deg) scale(1.02);
+
+    }
+}
+.heart::before{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    top: -50%;
+    position: absolute;
+    content: '';
+    border-radius: 50px;
+    animation: clr 5s infinite;
+}
+.heart::after{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    right: -50%;
+    position: absolute;
+    content: '';
+    border-radius: 50px;
+    animation: clr 5s infinite;
+}
+.circle{
+    height: 400px;
+    width: 400px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid rgb(87, 183, 221);
+    animation: c 2s linear infinite;
+    z-index: 1;
+   
+}
+.square{
+    height: 600px;
+    width: 600px;
+    background-color: rgb(185, 176, 182);
+    position: absolute;
+    left: 34%;
+
+}
+
+
+@keyframes c{
+    from{
+        transform: rotate(0);
+
+    }
+    to{
+        transform: rotate(360);
+        background-color: rgb(128, 207, 237);
+        transition: 2s;
+
+    }
+
+}
