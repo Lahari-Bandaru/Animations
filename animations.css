@@ -1,0 +1,48 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #111;
+}
+.lahari{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    animation: move 8s infinite;
+    position: relative;
+}
+@keyframes move{
+    0%{
+        top: 0px;
+        left: 0px;
+        background-color: red;
+
+    }
+    25%{
+        top: 0px;
+        left: 1400px;
+        background-color: rgb(238, 67, 141);
+
+    }
+    50%{
+        top: 600px;
+        left: 1400px;
+        background-color: #eb7d7d;
+
+    }
+    75%{
+        top: 600px;
+        left: 0px;
+        background-color: aqua;
+
+    }
+    100%{
+        top: 0px;
+        left: 0px;
+        background-color: blanchedalmond;
+
+    }
+}
